@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #027353, #03A66A);
+    position: relative;
+    overflow: hidden;
+}
+
+.description {
+    width: 70vw;
+    height: 30vh;
+    border-radius: 10vh;
+    background-color: #012326;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Quicksand';
+    text-align: center;
+}
+
+.logo-img{
+    height: 20vh;
+}
+
+.logo-name{
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.moving-icon{
+    width: 150px;
+    position: absolute;
+    animation: icon 2s infinite;
+}
+
+@keyframes icon{
+    from, to {transform: translateY(-5px);}
+    50% {transform: translateY(5px);}
+}
+
+.wip{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.wip > img{
+    height: 30px;
+    margin: 0 5px;
+}
+
+.cogimg{
+    animation: cog 2s infinite;
+}
+
+@keyframes cog{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+@media only screen and (max-width: 800px){
+    .description{
+        width: 100vw;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .logo-name{
+        font-size: 2.5em;
+        font-weight: 500;
+    }
+
+    .logo-img{
+        height: 10vh;
+    }
+}
